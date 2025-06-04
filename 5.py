@@ -8,7 +8,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix
 
 # Generate random data and labels
-X = np.random.rand(100, 1)
+X = np.random.rand(0, 1)
 y = np.array(['Class1' if xi <= 0.5 else 'Class2' for xi in X])
 
 # Specify desired k values
