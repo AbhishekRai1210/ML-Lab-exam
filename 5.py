@@ -11,7 +11,10 @@ from sklearn.metrics import confusion_matrix
 X = np.random.rand(100, 1)
 y = np.array(['Class1' if xi <= 0.5 else 'Class2' for xi in X])
 
-# Loop over k values and print confusion matrix
-for k in range(1, 11):
+# Specify desired k values
+k_values = [1, 2, 3, 4, 5, 10, 20]
+
+# Loop over the specified k values and print confusion matrix
+for k in k_values:
     y_pred = KNeighborsClassifier(n_neighbors=k).fit(X, y).predict(X)
     print(f"Confusion Matrix for k={k}:\n{confusion_matrix(y, y_pred)}\n")
